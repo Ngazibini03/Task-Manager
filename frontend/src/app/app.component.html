@@ -1,0 +1,59 @@
+<mat-toolbar class="custom-toolbar">
+  <!-- Left Section -->
+  <div class="left-section">
+    <span class="brand-name">LaceItUp Planner</span>
+  </div>
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <!-- Theme Toggle Button -->
+    <button mat-icon-button (click)="toggleTheme()" *ngIf="isEmployeeLogged || isAdminLogged">
+      <mat-icon>{{ switchTheme.value ? 'sunny' : 'dark_mode' }}</mat-icon>
+    </button>
+
+    <!-- Navigation Buttons -->
+    <button
+      mat-button
+      routerLink="/login"
+      routerLinkActive="active"
+      class="navigate-buttons"
+      *ngIf="!isEmployeeLogged && !isAdminLogged"
+    >
+      Login
+      <mat-icon matSuffix>login</mat-icon>
+    </button>
+    <button
+      mat-button
+      routerLink="/signup"
+      routerLinkActive="active"
+      class="navigate-buttons"
+      *ngIf="!isEmployeeLogged && !isAdminLogged"
+    >
+      Register
+      <mat-icon matSuffix>assignment</mat-icon>
+    </button>
+    <button
+      mat-button
+      (click)="logout()"
+      class="navigate-buttons"
+      *ngIf="isEmployeeLogged || isAdminLogged"
+    >
+      Logout
+      <mat-icon matSuffix>logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    mode="side"
+    [opened]="true"
+    [style.width]="sidenavWitdh()"
+    class="sidenav"
+  >
+    <app-custom-sidenav-component [collapsed]="collapsed()"></app-custom-sidenav-component>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

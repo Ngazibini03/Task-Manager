@@ -1,0 +1,53 @@
+<div class="sidenav-header" *ngIf="isAdminLogged">
+  <div class="profile-wrapper">
+    <img
+      [width]="profilePicSize()"
+      [height]="profilePicSize()"
+      src="../../../assets/icon1.png"
+      alt="Avatar"
+    />
+    <div class="header-text">
+      <h2>{{ this.user.role }}</h2>
+    </div>
+  </div>
+</div>
+
+<mat-nav-list class="sidebar-menu" *ngIf="isAdminLogged">
+  <a
+    mat-list-item
+    *ngFor="let item of adminMenuItems()"
+    [routerLink]="item.route"
+    routerLinkActive #rla="routerLinkActive"
+    [activated]="rla.isActive"
+  >
+    <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+    <span matListItemTitle>{{ item.label }}</span>
+  </a>
+</mat-nav-list>
+
+<div class="sidenav-header" *ngIf="isEmployeeLogged">
+  <div class="profile-wrapper">
+    <img
+      [width]="profilePicSize()"
+      [height]="profilePicSize()"
+      src="../../../assets/icon2.png"
+      alt="Avatar"
+    />
+    <div class="header-text">
+      <h2>{{ this.user.role }}</h2>
+    </div>
+  </div>
+</div>
+
+<mat-nav-list class="sidebar-menu" *ngIf="isEmployeeLogged">
+  <a
+    mat-list-item
+    *ngFor="let item of employeeMenuItems()"
+    [routerLink]="item.route"
+    routerLinkActive #rla="routerLinkActive"
+    [activated]="rla.isActive"
+  >
+    <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+    <span matListItemTitle>{{ item.label }}</span>
+  </a>
+</mat-nav-list>

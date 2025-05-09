@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Styles */
+body, html {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height: 100%;
+    margin: 0;
+    background: url('/assets/banner.jpg') no-repeat center center fixed; /* Set background image */
+    background-size: cover; /* Ensure the image covers the whole screen */
+    background-attachment: fixed; /* Parallax effect */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Background Color for the Entire Page */
+div {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+    height: 100%;
+}
+
+/* Container for Centering */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('/assets/banner.jpg') no-repeat center center fixed;
+    /*background-color: rgba(255, 255, 255, 0.8); /* Light semi-transparent background */
+    border-radius: 8px; /* Optional: rounded corners for the container */
+    backdrop-filter: blur(8px); /* Optional: blurred background effect */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* Mat Card Style */
+mat-card {
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for the card */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 8px;
+}
+
+/* Title Styling */
+mat-card-title {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Dark color for the title */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Two Column Layout for Input Fields */
+.two-column-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Form Fields Styling */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Adjust Form Fields for Two Columns */
+mat-form-field:nth-child(odd) {
+    margin-right: 20px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    width: 205%;
+    background-color: #E67E22; /* Orange background for the button */
+    color: #fff;
+    border: none;
+    padding: 16px; /* Increased padding for a bigger button */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Added some margin to separate the button from other elements */
+}
+
+/* Button Hover Effect */
+button[type="submit"]:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Error Styling */
+.error-snapback {
+    background-color: #f44336 !important;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 500px) {
+    mat-card-title {
+        font-size: 20px;
+    }
+
+    mat-form-field {
+        margin-bottom: 10px;
+    }
+
+    /* Stack the columns on smaller screens */
+    .two-column-form {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+    }
+
+    /* Adjust button size on smaller screens */
+    button[type="submit"] {
+        padding: 14px; /* Slightly smaller padding on mobile */
+        font-size: 16px; /* Adjust font size on mobile */
+    }
+}
+
+.forgot-password-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Forgot Password Link Styling */
+.forgot-password-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+    color: #0d47a1;
+}
+
+

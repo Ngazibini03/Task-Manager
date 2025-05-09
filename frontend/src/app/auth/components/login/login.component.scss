@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Global Styles */
+body, html {
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('/assets/banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Container with Overlay */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh;  /* Ensure the container takes at least full screen height */
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: url('/assets/bg 007.jpg') no-repeat center center fixed;
+    padding-bottom: 40px; /* Add some padding for the footer */
+    text-align: center;
+}
+
+/* Card Styling */
+mat-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* White background with transparency */
+    box-shadow: 0px 4px 12px rgba(0, 31, 63, 0.3);
+    border-radius: 12px;
+    margin-top: 20px; /* Add some space from the top */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Card */
+mat-card:hover {
+    transform: translateY(-10px); /* Lift card slightly */
+    box-shadow: 0px 8px 20px rgba(0, 31, 63, 0.4); /* Stronger shadow */
+}
+
+/* Title Styling */
+mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D35400; /* Dark Orange */
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Form Fields Styling */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+/* Input Field Styling */
+mat-input-element {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+mat-input-element:focus {
+    border-color: #D35400; /* Focused border with dark orange */
+}
+
+/* Button Styling */
+button[type="submit"] {
+    width: 100%;
+    background-color: #D35400; /* Dark Orange */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+button[type="submit"]:hover {
+    background-color: #E67E22; /* Slightly lighter orange */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+/* Button Focus Effect */
+button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(211, 84, 0, 0.6); /* Focus ring */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    mat-card {
+        padding: 20px;
+    }
+
+    mat-card-title {
+        font-size: 20px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

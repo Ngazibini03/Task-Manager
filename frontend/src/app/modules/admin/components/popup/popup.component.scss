@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Popup Container */
+mat-dialog-container {
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0px 6px 16px rgba(0, 31, 63, 0.3);
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #D35400;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Close Button */
+.header button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header mat-icon {
+  font-size: 20px;
+  color: #d35400;
+  transition: color 0.3s ease;
+}
+
+.header mat-icon:hover {
+  color: #E67E22;
+}
+
+/* Dialog Content */
+mat-dialog-content {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Dialog Actions */
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button[color="primary"] {
+  background-color: #D35400;
+  color: white;
+}
+
+button[color="primary"]:hover {
+  background-color: #E67E22;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(211, 84, 0, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+.custom-toolbar {
+  background: linear-gradient(to right, #ff5722, #ff9800); /* Gradient orange shades */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 64px;
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Left Section */
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* Complimenting text color */
+
+  letter-spacing: 1.5px;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+
+  button {
+    margin-left: 16px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    mat-icon {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      color: #fff9c4; /* Light yellow hover effect */
+    }
+  }
+}
+
+/* Navigation Buttons */
+.navigate-buttons {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+
+  &.active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff9c4; /* Light yellow underline for active links */
+  }
+
+  &:hover {
+    color: #fff9c4;
+  }
+}
+
+/* Sidenav Styling */
+mat-sidenav {
+  background: #ff9800; /* Orange shade */
+  color: white;
+  padding: 16px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Area Styling */
+.content {
+  padding: 24px;
+  margin-top: 64px; /* Adjust for fixed navbar */
+  background-image: url('https://source.unsplash.com/1920x1080/?planner,workspace');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 64px); /* Full height minus navbar */
+}

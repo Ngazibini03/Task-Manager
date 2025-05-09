@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>View Task</mat-card-title>
+    <mat-card-content>
+      <div class="task-info">
+        <div class="info-row">
+          <span class="info-label">Title:</span>
+          <span class="info-value">{{ task.title }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Description:</span>
+          <span class="info-value">{{ task.description }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Due Date:</span>
+          <span class="info-value">{{ task.dueDate | date: 'MMM d, y' }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Priority:</span>
+          <span class="info-value">{{ task.priority }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Status:</span>
+          <span class="info-value">{{ task.taskStatus }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

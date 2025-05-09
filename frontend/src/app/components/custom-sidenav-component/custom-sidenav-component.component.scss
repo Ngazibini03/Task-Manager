@@ -1,0 +1,118 @@
+/* Sidebar Background */
+mat-sidenav {
+  background: url('https://source.unsplash.com/800x600/?technology,abstract') no-repeat center center fixed;
+  background-size: cover; /* Ensure the image covers the sidebar */
+  color: #fff; /* Default text color */
+  width: 250px; /* Adjust the width of the sidebar */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Add a soft shadow */
+  padding-top: 60px; /* Push content down */
+}
+
+/* Header Section */
+.sidenav-header {
+  text-align: center;
+  padding: 60px 20px 20px; /* Add more padding at the top to move admin picture down */
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      border: 3px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      width: 100px; /* Ensure consistent size */
+      height: 100px; /* Ensure consistent size */
+    }
+
+    img:hover {
+      transform: scale(1.1); /* Slight zoom on hover */
+    }
+
+    .header-text {
+      margin-top: 10px;
+
+      h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff; /* Text color for role */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add a glow effect */
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/* Menu Items */
+.sidebar-menu {
+  padding: 20px 0; /* Add padding between menu items */
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    mat-icon {
+      margin-right: 12px;
+      color: #ffd700; /* Gold icon color */
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Light overlay */
+      transform: translateX(5px); /* Slide in effect */
+    }
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.2); /* Highlight active links */
+      border-left: 4px solid #ffd700; /* Gold border for active links */
+      color: #ffd700;
+
+      mat-icon {
+        color: #ffd700;
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  mat-sidenav {
+    width: 200px; /* Adjust width for smaller screens */
+    padding-top: 30px; /* Reduce padding for smaller screens */
+  }
+
+  .sidenav-header {
+    padding: 30px 10px 10px; /* Reduce padding for smaller screens */
+
+    img {
+      width: 80px; /* Smaller image size */
+      height: 80px;
+    }
+
+    .header-text h2 {
+      font-size: 1rem;
+    }
+  }
+
+  .sidebar-menu a {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+}
